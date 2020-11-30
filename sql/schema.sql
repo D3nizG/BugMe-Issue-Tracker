@@ -8,7 +8,7 @@ CREATE TABLE `users` (
 	`firstname` varchar(255) NOT NULL,
 	`lastname` varchar(255) NOT NULL,
 	`email` varchar(255) NOT NULL UNIQUE,
-	`password` CHAR(32) NOT NULL,
+	`password` CHAR(255) NOT NULL,
 	`date_joined` DATETIME NOT NULL,
 	PRIMARY KEY (`id`)
 );
