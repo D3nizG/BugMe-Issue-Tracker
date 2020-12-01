@@ -1,0 +1,166 @@
+html{
+    box-sizing: content-box;
+    max-width: 1500px;
+}
+body{
+    color: white;
+    height: 100%;
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "sidebar mainbar mainbar"
+    "sidebar mainbar mainbar"
+    "sidebar mainbar mainbar";
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    grid-area: header;
+    background-color: black;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(192, 187, 187);
+    width: 220px;
+    height: 720px;
+}
+
+.mainbar{
+    grid-area: mainbar;
+    color:black;
+    background-color:  rgb(255, 255, 255);;
+    width: 1280px;
+    padding: 10px;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+
+.inline button{
+    margin:20px;
+    background-color: green;
+    border: 5px solid green;
+    color: white;
+}
+.inline h1{
+    width:80%;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
+}
+.filter button{
+    padding: 4px;
+    border:3px solid white;
+    margin: 20px;
+}
+
+table{
+    border-collapse: collapse;
+    /* padding: 30px; */
+    /* border:10px solid #687291; */
+    border-radius: 15px;
+    font-family: 'Gill Sans';
+    font-size: 20px;
+}
+
+td{
+    border-bottom: 1px solid black;
+}
+
+
+tr,td,th{
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+tr:nth-child(1){
+    background-color: rgb(202, 201, 201);
+}
+th{
+    text-align: left;
+}
+
+
+th:nth-child(1){
+    width:60px;
+}
+
+th:nth-child(2){
+   width:300px;
+}
+th:nth-child(3){
+    width:100px;
+ }
+
+ th:nth-child(4){
+    width:200px;
+    text-align: center;
+ }
+
+ th:nth-child(5){
+    width:300px;
+ }
+
+
+tr td:nth-child(1){
+    text-align: left;
+    font-weight: bold;
+}
+tr td:nth-child(2){
+    text-align: left;
+    color: rgb(108, 223, 231)
+}
+
+tr td:nth-child(3){
+    text-align: left;
+}
+
+tr td:nth-child(4){
+    text-align: center;
+}
+
+tr td:nth-child(5){
+    text-align: left;
+}
+
+tr td:nth-child(6){
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+li{
+    padding:5px;
+}
+li:nth-child(1){
+    list-style-image: url(../images/home1.png);
+}
+li:nth-child(2){
+    list-style-image: url(../images/add_user.png);
+}
+li:nth-child(3){
+    list-style-image: url(../images/add.png);
+}
+li:nth-child(4){
+    list-style-image: url(../images/logout.png);
+}
