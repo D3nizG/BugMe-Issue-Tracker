@@ -1,0 +1,93 @@
+html{
+    box-sizing: content-box;
+    max-width: 1500px;
+}
+body{
+    color: white;
+    height: 100%;
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "sidebar mainbar mainbar"
+    "sidebar mainbar mainbar"
+    "sidebar mainbar mainbar";
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    grid-area: header;
+    background-color: black;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(192, 187, 187);
+    width: 220px;
+    height: 720px;
+}
+
+.mainbar{
+    grid-area: mainbar;
+    color:black;
+    background-color:  rgb(255, 255, 255);;
+    width: 1280px;
+    padding-left: 50px;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.formdiv form{
+    display:flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+label, input{
+    padding: 10px;
+    font-weight: bold;
+}
+
+#descrip{
+    height:100px;
+}
+
+select{
+    height: 40px;
+}
+
+.button{
+    margin-top:20px;
+    background-color: rgb(0, 9, 128);
+    border: 5px solid rgb(0, 9, 128);
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+}
+input,select,textarea{
+    background-color: rgb(231, 230, 230);
+}
+
+li{
+    padding:5px;
+}
+li:nth-child(1){
+    list-style-image: url(../images/home1.png);
+}
+li:nth-child(2){
+    list-style-image: url(../images/add_user.png);
+}
+li:nth-child(3){
+    list-style-image: url(../images/add.png);
+}
+li:nth-child(4){
+    list-style-image: url(../images/logout.png);
+}
