@@ -1,0 +1,82 @@
+html{
+    box-sizing: content-box;
+    max-width: 1600px;
+}
+body{
+    color: white;
+    height: 100%;
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "sidebar mainbar mainbar"
+    "sidebar mainbar mainbar"
+    "sidebar mainbar mainbar";
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.header{
+    grid-area: header;
+    background-color: black;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(192, 187, 187);
+    width: 220px;
+    height: 720px;
+}
+
+.mainbar{
+    grid-area: mainbar;
+    color:black;
+    background-color:  rgba(186, 189, 31, 0.473);;
+    width: 1380px;
+    padding: 10px;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    margin:20px;
+    background-color: green;
+    border: 5px solid green;
+    color: white;
+}
+.inline h1{
+    width:80%;
+}
+
+
+
+
+
+
+
+
+li{
+    padding:5px;
+}
+li:nth-child(1){
+    list-style-image: url(../images/home1.png);
+}
+li:nth-child(2){
+    list-style-image: url(../images/add_user.png);
+}
+li:nth-child(3){
+    list-style-image: url(../images/add.png);
+}
+li:nth-child(4){
+    list-style-image: url(../images/logout.png);
+}
