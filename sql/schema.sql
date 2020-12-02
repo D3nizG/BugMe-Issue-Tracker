@@ -8,7 +8,7 @@ CREATE TABLE `users` (
 	`firstname` varchar(255) NOT NULL,
 	`lastname` varchar(255) NOT NULL,
 	`email` varchar(255) NOT NULL UNIQUE,
-	`password` CHAR(255) NOT NULL,
+	`pword` CHAR(255) NOT NULL,
 	`date_joined` DATETIME NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -29,5 +29,5 @@ CREATE TABLE `issues` (
 
 
 
-INSERT into users(firstname,lastname,password,email,date_joined)
+INSERT into users(firstname,lastname,pword,email,date_joined)
 VALUES ("Tom","Bill",SHA2('password123',512),"admin@project2.com",NOW());
