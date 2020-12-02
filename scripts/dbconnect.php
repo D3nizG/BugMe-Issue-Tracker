@@ -16,12 +16,12 @@ try {
     //name validation
     if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
       $nameErr = "Only letters and white space allowed";
-      echo $nameErr
+      echo $nameErr;
     }
     //lastname validation
     if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
         $nameErr = "Only letters and white space allowed";
-        echo $nameErr
+        echo $nameErr;
       }
     
       //email validation
@@ -48,11 +48,11 @@ try {
 
 
 
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
     echo "Connected to $dbname at $host";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT into users(firstname,lastname,password,email,date_joined)
-    VALUES ('$firstname',$lastname,'$password','email')";
+    $sql = "INSERT into users(firstname,lastname,pword,email)
+    VALUES ('$firstname','$lastname','$hashed_password','$email')";
     $conn->exec($sql);
 
 } catch (PDOException $pe) {

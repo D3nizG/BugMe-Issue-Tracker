@@ -2,4 +2,4 @@
     $host = 'localhost';
     $dbname = 'bugDB';
     $username = 'admin';
-    $password = 'password';
+    $password1 = 'password123';
