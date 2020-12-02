@@ -48,7 +48,7 @@
             $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
             $stmt = $conn->query("SELECT id, firstname, lastname FROM users");
             $results = $stmt ->fetchALL(PDO ::FETCH_ASSOC);
-            echo "<select>";
+            echo "<select name=assigned>";
             foreach($results as $row){
                 echo '<option value="'.$row['id'].'">'.$row['firstname'].' '.$row['lastname'].'</option>';
             }
