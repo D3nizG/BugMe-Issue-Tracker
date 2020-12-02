@@ -49,6 +49,9 @@ try {
     $sql = "INSERT into users(firstname,lastname,pword,email)
     VALUES ('$sanitizedFirstName','$sanitizedLastName','$hashed_password','$sanitizedEmail')";
     $conn->exec($sql);
+    $referer = $_SERVER['HTTP_REFERER'];
+    header("Location: $referer");
+    exit;
 
 } catch (PDOException $pe) {
     die("Could not connect to the database $dbname :" . $pe->getMessage());
