@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="styles/user.css">
+  <script type="text/javascript" src="scripts/add_user_validation.js"></script>
   <title>BugMe Issue Tracker</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
     <div class="formdiv">
       <h1>New User</h1>
 
-      <form name = "adduserForm" action="scripts/dbconnect.php" method="post">
+      <form name = "adduserForm" action="scripts/add_user.php" method="post" >
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" >
       
@@ -40,7 +41,7 @@
         <label for="email"> Email </label>
         <input type="email" id="email" name="email">
 
-        <input class='button' type="submit" value="Submit">
+        <input class='button' type="submit" onclick="return validate()" value="Submit">
       </form>
     </div>
   </div>

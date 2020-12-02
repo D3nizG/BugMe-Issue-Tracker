@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="scripts/login_validation.js"></script>
   <title>BugMe Issue Tracker</title>
 </head>
 
@@ -12,17 +13,17 @@
   <div class="header">
   </div>
   <div class="login">
-    <form action=" " method=" ">
+    <form onsubmit="return validate()" action="scripts/login.php" method="POST">
       <div class="imgcontainer">
         <img src="logicon.png" alt="Avatar" class="avatar">
       </div>
   
       <div class="container">
         <label for="email"><b> Email </b></label>
-        <input type="email" placeholder="Enter your email" name="email" required>
+        <input type="email" placeholder="Enter your email" name="email" id="email" required>
     
         <label for="psw"><b> Password </b></label>
-        <input type="password" placeholder="Enter your password" name="psw" required>
+        <input type="password" placeholder="Enter your password" name="psw" id='pword' required>
   
         <button type="submit">Login</button>
       </div>

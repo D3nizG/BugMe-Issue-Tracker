@@ -30,4 +30,7 @@ CREATE TABLE `issues` (
 
 
 INSERT into users(firstname,lastname,pword,email,date_joined)
-VALUES ("Tom","Bill",SHA2('password123',512),"admin@project2.com",NOW());
+VALUES ("Tom","Bill",SHA2('Password123',512),"admin@project2.com",NOW());
+
+INSERT into users(firstname,lastname,pword,email,date_joined)
+VALUES ("Drew","Don",SHA2('Password123',512),"drew@project2.com",NOW());
