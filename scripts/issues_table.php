@@ -11,7 +11,7 @@ try{
         echo '<table>';
         echo '<tr>';
         echo'<th>Title</th>';
-        echo '<th></th>';
+        // echo '<th></th>';
         echo '<th>Type</th>';
         echo '<th>Status</th>';
         echo '<th>Assigned To</th>';
@@ -22,7 +22,7 @@ try{
             $date1 = $datetime->format('Y-m-d');
             echo '<tr>';
             echo '<td>'.$row['title'].'</td>';
-            echo '<td>'.$row['descrip'].'</td>';
+            // echo '<td>'.$row['descrip'].'</td>';
             echo '<td class="typeof">'.$row['typeof'].'</td>';
             echo '<td   class="status">'.$row['stat'].'</td>';
             echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
@@ -35,7 +35,7 @@ try{
         echo '<table>';
         echo '<tr>';
         echo'<th>Title</th>';
-        echo '<th></th>';
+        // echo '<th></th>';
         echo '<th>Type</th>';
         echo '<th>Status</th>';
         echo '<th>Assigned To</th>';
@@ -47,7 +47,7 @@ try{
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
                 echo '<td>'.$row['title'].'</td>';
-                echo '<td>'.$row['descrip'].'</td>';
+                // echo '<td>'.$row['descrip'].'</td>';
                 echo '<td class="typeof">'.$row['typeof'].'</td>';
                 echo '<td   class="status">'.$row['stat'].'</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
@@ -61,7 +61,7 @@ try{
         echo '<table>';
         echo '<tr>';
         echo'<th>Title</th>';
-        echo '<th></th>';
+        // echo '<th></th>';
         echo '<th>Type</th>';
         echo '<th>Status</th>';
         echo '<th>Assigned To</th>';
@@ -73,7 +73,7 @@ try{
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
                 echo '<td>'.$row['title'].'</td>';
-                echo '<td>'.$row['descrip'].'</td>';
+                // echo '<td>'.$row['descrip'].'</td>';
                 echo '<td class="typeof">'.$row['typeof'].'</td>';
                 echo '<td  class="status">'.$row['stat'].'</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';

@@ -75,4 +75,4 @@ window.setInterval(function(){
             b.innerHTML="Task";
         }
     }
-  }, 100);
+  }, 10);

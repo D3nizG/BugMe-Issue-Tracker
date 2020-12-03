@@ -44,7 +44,6 @@
           <table>
             <tr>
               <th>Title</th>
-              <th></th>
               <th>Type</th>
               <th>Status</th>
               <th>Assigned To</th>
