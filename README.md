@@ -1,6 +1,6 @@
-# Webdev Project 2
+# Webdev-Project2 
 
-login details to BugMe Web Portal
+Admin Login to Portal
 
 email: admin@project2.com
 password: Password123

@@ -21,7 +21,7 @@ if(isset($_POST["login"])) {
                 header('location:home.php');
 
             }else{
-                $errorMsg = '<label>Invalid username or password!</label>';
+                $errorMsg = '<label style="color:red;">Invalid username or password!</label>';
         }
     
         } 
@@ -36,36 +36,36 @@ if(isset($_POST["login"])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../styles/login.css">
   <title>BugMe Issue Tracker</title>
 </head>
 
 <body>
-  <div class="header">
+<h2>BugMe Issue Tracker Login Portal</h2>
+
+<form method="POST">
+  <div class="imgcontainer">
+    <img src="../logicon.png" alt="Avatar" class="avatar">
   </div>
-  <div class="login">
-    <form method="POST">
-      <div class="imgcontainer">
-        <img src="../logicon.png" alt="Avatar" class="avatar">
-      </div>
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Your Email" name="email" id="email" required>
+
+    <label for="password"><b> Password </b></label>
+    <input type="password" placeholder="Enter your password" name="password" id='password' required>
+    </div>
         <?php
         if(isset($errorMsg)){
             echo $errorMsg;
         }
         ?>
         <br>
-      <div class="container">
-        <label for="email"><b> Email </b></label>
-        <input type="email" placeholder="Enter your email" name="email" id="email" required>
-    
-        <label for="password"><b> Password </b></label>
-        <input type="password" placeholder="Enter your password" name="password" id='password' required>
-        <button type="submit" id="loginBtn" name="login">Login</button>
-      </div>
-      
+    <button type="submit" id="loginBtn" name="login">Login</button>
   
-    </form>
-
   </div>
+
+</form>
+
 </body>
 
 </html>

@@ -40,8 +40,6 @@ require_once 'connectdb.php';
 
     }
 
-
-
     $sql = "INSERT into users(firstname,lastname,pword,email,date_joined)
     VALUES ('$sanitizedFirstName','$sanitizedLastName','$hashed_password','$sanitizedEmail',NOW())";
     $conn->exec($sql);
