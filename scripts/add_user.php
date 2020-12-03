@@ -46,8 +46,8 @@ try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
     echo "Connected to $dbname at $host";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT into users(firstname,lastname,pword,email)
-    VALUES ('$sanitizedFirstName','$sanitizedLastName','$hashed_password','$sanitizedEmail')";
+    $sql = "INSERT into users(firstname,lastname,pword,email,date_joined)
+    VALUES ('$sanitizedFirstName','$sanitizedLastName','$hashed_password','$sanitizedEmail',NOW())";
     $conn->exec($sql);
     $referer = $_SERVER['HTTP_REFERER'];
     header("Location: $referer");
