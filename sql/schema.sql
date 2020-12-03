@@ -30,10 +30,7 @@ CREATE TABLE `issues` (
 
 
 INSERT into users(firstname,lastname,pword,email,date_joined)
-VALUES ("Tom","Bill",SHA2('password123',512),"admin@project2.com",NOW());
-
-INSERT into users(firstname,lastname,pword,email,date_joined)
-VALUES ("Drew","Don",SHA2('Password123',512),"drew@project2.com",NOW());
+VALUES ("Tom","Bill","$2y$10$nZ5/UefjQMN1O8HFBIEHP.MU/Y3MuwheNEwvY.BFZ.B7H0jGiL7LO","admin@project2.com",NOW());
 
 INSERT into issues(title,descrip,typeof,priority,stat,assigned_to,created_by, created,updated)
 VALUES ('test','desc','bug','minor','open','2','1',NOW(),NOW());
