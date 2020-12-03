@@ -16,7 +16,7 @@ if(isset($_SESSION['email'])) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>BugMe Issue Tracker</title>
-  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="../styles/home.css">
 </head>
 
 <body>
@@ -29,9 +29,9 @@ if(isset($_SESSION['email'])) {
     <div class="sidebar">
       <ul class="">
         <li><a href="home.php"> Home</a></li>
-        <li><a href="createuser.html"> Add User</a></li>
+        <li><a href="../createuser.html"> Add User</a></li>
         <li><a href="newissue.php"> New Issue</a></li>
-        <li><a href="login.php"> Logout</a></li>
+        <li><a href="logout.php"> Logout</a></li>
       </ul>
     </div>
   

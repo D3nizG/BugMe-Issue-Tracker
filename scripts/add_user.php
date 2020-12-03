@@ -1,8 +1,7 @@
 <?php
 
-require_once 'dbconfig.php';
+require_once 'connectdb.php';
 
-try {
     $firstname = $_POST['firstname'];
     $sanitizedFirstName = filter_var($firstname, FILTER_SANITIZE_STRING	);
     $lastname = $_POST['lastname'];
@@ -43,9 +42,6 @@ try {
 
 
 
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
-    echo "Connected to $dbname at $host";
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT into users(firstname,lastname,pword,email,date_joined)
     VALUES ('$sanitizedFirstName','$sanitizedLastName','$hashed_password','$sanitizedEmail',NOW())";
     $conn->exec($sql);
@@ -53,11 +49,9 @@ try {
     header("Location: $referer");
     exit;
 
-} catch (PDOException $pe) {
-    die("Could not connect to the database $dbname :" . $pe->getMessage());
-}
-$conn = null;
+
 ?>
+
 
 
 
