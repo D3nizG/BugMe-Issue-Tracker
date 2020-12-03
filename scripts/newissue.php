@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="styles/issue.css">
+    <link rel="stylesheet" href="../styles/issue.css">
     <title>BugMe Issue Tracker</title>
   </head>
 
@@ -20,9 +20,9 @@
     <div class="sidebar">
       <ul class="">
         <li><a href="home.php"> Home</a></li>
-        <li><a href="createuser.html"> Add User</a></li>
+        <li><a href="../createuser.html"> Add User</a></li>
         <li><a href="newissue.php"> New Issue</a></li>
-        <li><a href="login.html"> Logout</a></li>
+        <li><a href="logout.php"> Logout</a></li>
       </ul>
     </div>
 
@@ -44,7 +44,7 @@
             <option value="3"> user three </option>
           </select> -->
           <?php
-            require_once 'scripts/dbconfig.php';
+            require_once 'dbconfig.php';
             $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
             $stmt = $conn->query("SELECT id, firstname, lastname FROM users");
             $results = $stmt ->fetchALL(PDO ::FETCH_ASSOC);
