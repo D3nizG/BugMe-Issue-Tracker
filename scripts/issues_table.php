@@ -68,9 +68,9 @@ try{
         echo '<th>Created</th>';
         echo '</tr>';
         foreach($results as $row){
-            $datetime = new DateTime($row['created']);
-            $date1 = $datetime->format('Y-m-d');
             if($row['id']=="1"){
+                $datetime = new DateTime($row['created']);
+                $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
                 echo '<td>'.$row['title'].'</td>';
                 echo '<td>'.$row['descrip'].'</td>';
