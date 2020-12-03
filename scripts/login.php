@@ -21,7 +21,7 @@ if(isset($_POST["login"])) {
                 header('location:home.php');
 
             }else{
-                $errorMsg = '<label style="color:red;">Invalid username or password!</label>';
+                $errorMsg = '<label style="color:red;">Invalid email or password!</label>';
         }
     
         } 
