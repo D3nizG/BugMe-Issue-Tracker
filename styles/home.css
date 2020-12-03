@@ -165,6 +165,10 @@ tr td:nth-child(6){
     text-align: left;
 }
 
+.status{
+    border-radius: 15px;
+}
+
 
 
 
