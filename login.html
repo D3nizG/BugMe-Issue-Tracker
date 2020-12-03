@@ -13,7 +13,7 @@
   <div class="header">
   </div>
   <div class="login">
-    <form onsubmit="return validate()" action="scripts/login.php" method="POST">
+    <form action="scripts/login.php" method="POST">
       <div class="imgcontainer">
         <img src="logicon.png" alt="Avatar" class="avatar">
       </div>
@@ -24,8 +24,8 @@
     
         <label for="psw"><b> Password </b></label>
         <input type="password" placeholder="Enter your password" name="psw" id='pword' required>
-  
-        <button type="submit">Login</button>
+        <span><?php echo @$errorMsg;?></span>
+        <button type="submit" name="login">Login</button>
       </div>
       
   
