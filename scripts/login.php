@@ -1,43 +1,74 @@
 <?php 
 session_start();
-require_once 'dbconfig.php';
-?>
-
-<?php 
-
-$email = $_POST['email'];
-$sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
-$password = $_POST['psw'];
-$sanitizedPassword = filter_var($password, FILTER_SANITIZE_STRING   );
-$errorMsg = '';
+require_once 'connectdb.php';
 
 
 if(isset($_POST["login"])) {
-    if ($email != '' && $password != ''){
-        try {
-            $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
-            echo "Connected to $dbname at $host";
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    if ($_POST['email'] != '' && $_POST['password'] != ''){
+        $query = "SELECT * from `users` where `email`=:email";
+        $sql = $conn->prepare($query);
+        $sql->execute(
+            array(
+                'email' => $_POST['email'],        
+            )
+        );
+            $count = $sql->rowCount();
+            $data   = $sql->fetch(PDO::FETCH_ASSOC);
 
-            $sql = $conn->query("SELECT email, pword, firstname FROM users");
-            $results = $sql ->fetchALL(PDO ::FETCH_ASSOC);
+            if($count == 1 && password_verify($_POST['password'], $data['pword'])){
 
-            if($results == 1 && password_verify($sanitizedPassword, $row['pword'])) {
-                $_SESSION['sessionEmail'] = $row['email'];
-                $_SESSION['sessionUserName'] = $row['firstname'];
+                $_SESSION['email'] = $_POST['email'];
+                header('location:home.php');
 
             }else{
-                $errorMsg = '<label>Invalid Credentials, try again.</label>';
+                $errorMsg = '<label>Invalid username or password!</label>';
         }
-        } catch (PDOException $pe) {
-            die("Could not connect to the database $dbname :" . $pe->getMessage());
-        }
+    
+        } 
+    
     }
-
-}
-$conn = null;
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="scripts/login_validation.js"></script>
+  <title>BugMe Issue Tracker</title>
+</head>
+
+<body>
+  <div class="header">
+  </div>
+  <div class="login">
+    <form method="POST">
+      <div class="imgcontainer">
+        <img src="../logicon.png" alt="Avatar" class="avatar">
+      </div>
+        <?php
+        if(isset($errorMsg)){
+            echo $errorMsg;
+        }
+        ?>
+        <br>
+      <div class="container">
+        <label for="email"><b> Email </b></label>
+        <input type="email" placeholder="Enter your email" name="email" id="email" required>
+    
+        <label for="password"><b> Password </b></label>
+        <input type="password" placeholder="Enter your password" name="password" id='password' required>
+        <button type="submit" id="loginBtn" name="login">Login</button>
+      </div>
+      
+  
+    </form>
+
+  </div>
+</body>
+
+</html>
 
 
