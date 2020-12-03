@@ -1,5 +1,6 @@
 html{
     box-sizing: content-box;
+    min-width: 1400px;
     max-width: 1500px;
 }
 body{
@@ -54,6 +55,13 @@ a{
     border: 5px solid green;
     color: white;
 }
+
+.filter button:focus{
+    background-color: blue;
+}
+.filter button:visited{
+    background-color: white;
+}
 .inline h1{
     width:80%;
 }
@@ -95,26 +103,41 @@ th{
     text-align: left;
 }
 
-
-th:nth-child(1){
-    width:60px;
+/* TITLE HEADING */
+th:nth-child(1){ 
+    min-width: 80px;
+    max-width:80px;
 }
 
+/* DESCRIPTION HEADING */
 th:nth-child(2){
-   width:300px;
+    min-width: 400px;
+   max-width:400px;
 }
+
+/* TYPE HEADING */
 th:nth-child(3){
-    width:100px;
+    min-width: 80px;
+    max-width:80px;
  }
 
+/* STATUS HEADING */
  th:nth-child(4){
-    width:200px;
+     min-width:100px;
+    max-width:100px;
     text-align: center;
  }
-
+/* ASSIGNED TO HEADING */
  th:nth-child(5){
-    width:300px;
+     min-width: 300px;
+    max-width:300px;
  }
+
+ /* CREATED HEADING */
+ th:nth-child(6){
+    min-width: 200px;
+   max-width:200px;
+}
 
 
 tr td:nth-child(1){

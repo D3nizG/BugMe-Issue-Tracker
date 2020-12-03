@@ -7,7 +7,7 @@ try{
     $descrip = $_POST['descrip'];
     $assign = $_POST['assigned'];
     $typeof = $_POST['typeof'];
-    echo $typeof;
+    // echo $typeof;
     $priority = $_POST['pri'];
     $datetime = date("Y-m-d");
     $stat ='open';
