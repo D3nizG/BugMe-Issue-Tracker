@@ -162,7 +162,9 @@ tr td:nth-child(5){
     border-radius: 15px;
 }
 
-
+.hide{
+    display:none;
+}
 
 
 

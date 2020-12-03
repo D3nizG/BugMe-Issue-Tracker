@@ -7,7 +7,7 @@ function button() {
        e.preventDefault();
        $.ajax({
         type: 'POST',
-        url: "scripts/issues_table.php",
+        url: "issues_table.php",
         data:{"button":"all"},
         success: function(data){
             $("#result").html(data);
@@ -19,7 +19,7 @@ function button() {
         e.preventDefault();
         $.ajax({
          type: 'POST',
-         url: "scripts/issues_table.php",
+         url: "issues_table.php",
          data:{"button":"open"},
          success: function(data){
              $("#result").html(data);
@@ -30,7 +30,7 @@ function button() {
         e.preventDefault();
         $.ajax({
          type: 'POST',
-         url: "scripts/issues_table.php",
+         url: "issues_table.php",
          data:{"button":"mytickets"},
          success: function(data){
              $("#result").html(data);

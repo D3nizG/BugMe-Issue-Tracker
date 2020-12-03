@@ -1,12 +1,3 @@
-<?php 
-session_start();
-if(isset($_SESSION['email'])) {
-  echo '<h3>Welcome '.$_SESSION['email'].'</h3>';
-} else { 
-  header('location:login.php');
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +12,16 @@ if(isset($_SESSION['email'])) {
   <script language="JavaScript" type="text/javascript" src="table.js"></script>
 </head>
 <body>
+  <div class="hide">
+  <?php 
+  session_start();
+  if(isset($_SESSION['email'])) {
+    echo '<h3>Welcome '.$_SESSION['email'].'</h3>';
+  } else { 
+    header('location:login.php');
+  }
+  ?>
+  </div>
   <div class="header">
     <h1><i class="material-icons"> bug_report</i>BugMe Issue Tracker</h1>
   </div>
@@ -28,9 +29,9 @@ if(isset($_SESSION['email'])) {
     <div class="sidebar">
       <ul class="">
         <li><a href="home.php"> Home</a></li>
-        <li><a href="createuser.html"> Add User</a></li>
+        <li><a href="../createuser.html"> Add User</a></li>
         <li><a href="newissue.php"> New Issue</a></li>
-        <li><a href="logout.php"> Logout</a></li>
+        <li><a href="../login.html"> Logout</a></li>
       </ul>
     </div>
   
