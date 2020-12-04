@@ -43,13 +43,14 @@ if(isset($_POST["login"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../styles/login.css">
+  <script type="text/javascript" src="scripts/login_validation.js"></script>
   <title>BugMe Issue Tracker</title>
 </head>
 
 <body>
 <h2>BugMe Issue Tracker Login Portal</h2>
 
-<form method="POST">
+<form onsubmit="return validate()" method="POST">
   <div class="imgcontainer">
     <img src="../logicon.png" alt="Avatar" class="avatar">
   </div>
