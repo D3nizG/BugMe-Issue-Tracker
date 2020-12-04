@@ -31,7 +31,7 @@
         <li><a href="home.php"> Home</a></li>
         <li><a href="../createuser.html"> Add User</a></li>
         <li><a href="newissue.php"> New Issue</a></li>
-        <li><a href="../login.html"> Logout</a></li>
+        <li><a href="login.php"> Logout</a></li>
       </ul>
     </div>
   
