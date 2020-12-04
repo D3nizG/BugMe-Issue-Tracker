@@ -1,6 +1,6 @@
 <?php
 require_once 'dbconfig.php';
-// require 'login.php';
+require 'login_valid.php';
 
 try{
     // $logg=$_COOKIE['id'];
@@ -64,7 +64,7 @@ try{
         echo '<th>Created</th>';
         echo '</tr>';
         foreach($results as $row){
-            if($row['id']==2){
+            if($row['id']==$logg){
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
