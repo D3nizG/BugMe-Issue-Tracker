@@ -1,11 +1,12 @@
 html{
     box-sizing: content-box;
-    min-width: 1400px;
-    max-width: 1500px;
+    min-width: 100%;
+    max-width: 100%;
 }
 body{
     color: white;
     height: 100%;
+    width: 100%;
     display:grid;
     grid-template-areas: 
     "header header header"
@@ -20,13 +21,14 @@ body{
 }
 .header{
     grid-area: header;
+    width: 100%;
     background-color: black;
 }
 
 .sidebar{
     grid-area: sidebar;
     background-color: rgb(192, 187, 187);
-    width: 220px;
+    width: 15%;
     height: 720px;
 }
 
@@ -34,7 +36,7 @@ body{
     grid-area: mainbar;
     color:black;
     background-color:  rgb(255, 255, 255);;
-    width: 1280px;
+    width: 85%;
     padding: 10px;
 }
 

@@ -55,25 +55,7 @@ session_start();
               <th>Assigned To</th>
               <th>Created</th>
             </tr>
-            <!-- <tr>
-              <td>Hello</td>
-              <td>Hi</td>
-              <td>touche</td>
-              <td>yipp</td>
-              <td>yaba daba do</td>
-              <td>flintsones</td>
-            </tr>
-            <tr>
-              <td>Adele</td>
-              <td>japan</td>
-              <td>batman</td>
-              <td>yab</td>
-              <td>shabba</td>
-              <td>kingman</td>
-            </tr> -->
 
-
-          <!-- </table> -->
         </div>
 
 
