@@ -165,6 +165,12 @@ tr td:nth-child(5){
 .hide{
     display:none;
 }
+ #result{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+ }
+
 
 
 
