@@ -30,7 +30,7 @@
       <div class="formdiv">
 
         <h1> Create Issue </h1>
-        <form name = "newissue" action="scripts/issue.php" method="post">
+        <form name = "newissue" action="issue.php" method="post">
           <label for="title">Title</label>
           <input type="text" id="title" name="title">
 
