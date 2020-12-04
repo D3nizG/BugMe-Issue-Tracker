@@ -33,7 +33,7 @@
         <form name = "newissue" action="issue.php" method="post">
           <label for="title">Title</label>
           <input type="text" id="title" name="title">
-          
+
           <label for="descrip">Description</label>
           <textarea id="descrip" name="descrip"></textarea>
 
