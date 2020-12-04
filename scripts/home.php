@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,17 +18,11 @@
 </head>
 <body>
   <div class="hide">
-  <?php 
-  session_start();
-  if(isset($_SESSION['email'])) {
-    echo '<h3>Welcome '.$_SESSION['email'].'</h3>';
-  } else { 
-    header('location:login.php');
-  }
-  ?>
+
   </div>
   <div class="header">
     <h1><i class="material-icons"> bug_report</i>BugMe Issue Tracker</h1>
+    <?php echo('<h3>Welcome '.$_SESSION['firstname'].'</h3>') ?>
   </div>
   <div class='container'>
     <div class="sidebar">
@@ -34,7 +33,7 @@
         <li><a href="login.php"> Logout</a></li>
       </ul>
     </div>
-  
+
     <div class="mainbar">
       <div class="dashtable">
         <div class="inline">
@@ -72,12 +71,12 @@
               <td>shabba</td>
               <td>kingman</td>
             </tr> -->
-    
-    
+
+
           <!-- </table> -->
         </div>
-  
-        
+
+
       </div>
     </div>
   </div>
