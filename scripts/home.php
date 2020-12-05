@@ -1,5 +1,8 @@
 <?php
-session_start();
+require_once "login_valid.php";
+if($_SESSION['id']==null){
+  header('location:login.php');
+}
 
 ?>
 
@@ -28,9 +31,9 @@ session_start();
     <div class="sidebar">
       <ul class="">
         <li><a href="home.php"> Home</a></li>
-        <li><a href="../createuser.html"> Add User</a></li>
+        <li><a href="createuser.php"> Add User</a></li>
         <li><a href="newissue.php"> New Issue</a></li>
-        <li><a href="login.php"> Logout</a></li>
+        <li><a href="logout.php"> Logout</a></li>
       </ul>
     </div>
 
@@ -55,25 +58,7 @@ session_start();
               <th>Assigned To</th>
               <th>Created</th>
             </tr>
-            <!-- <tr>
-              <td>Hello</td>
-              <td>Hi</td>
-              <td>touche</td>
-              <td>yipp</td>
-              <td>yaba daba do</td>
-              <td>flintsones</td>
-            </tr>
-            <tr>
-              <td>Adele</td>
-              <td>japan</td>
-              <td>batman</td>
-              <td>yab</td>
-              <td>shabba</td>
-              <td>kingman</td>
-            </tr> -->
 
-
-          <!-- </table> -->
         </div>
 
 

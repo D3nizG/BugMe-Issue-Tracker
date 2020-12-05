@@ -1,3 +1,10 @@
+<?php
+require_once "login_valid.php";
+if($_SESSION['id']==null){
+  header('location:login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +27,7 @@
     <div class="sidebar">
       <ul class="">
         <li><a href="home.php"> Home</a></li>
-        <li><a href="../createuser.html"> Add User</a></li>
+        <li><a href="createuser.php"> Add User</a></li>
         <li><a href="newissue.php"> New Issue</a></li>
         <li><a href="logout.php"> Logout</a></li>
       </ul>

@@ -1,3 +1,10 @@
+<?php
+require_once "login_valid.php";
+if($_SESSION['id']==null){
+  header('location:login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles/user.css">
+  <link rel="stylesheet" href="../styles/user.css">
   <title>BugMe Issue Tracker</title>
 </head>
 <body>
@@ -16,10 +23,10 @@
 
   <div class="sidebar">
     <ul class="">
-      <li><a href="scripts/home.php"> Home</a></li>
-      <li><a href="createuser.html"> Add User</a></li>
-      <li><a href="scripts/newissue.php"> New Issue</a></li>
-      <li><a href="scripts/logout.php"> Logout</a></li>
+      <li><a href="home.php"> Home</a></li>
+      <li><a href="createuser.php"> Add User</a></li>
+      <li><a href="newissue.php"> New Issue</a></li>
+      <li><a href="logout.php"> Logout</a></li>
     </ul>    
   </div>
 

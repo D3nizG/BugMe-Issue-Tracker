@@ -1,9 +1,8 @@
 <?php
 require_once 'dbconfig.php';
-// require 'login.php';
+require 'login_valid.php';
 
 try{
-    // $logg=$_COOKIE['id'];
     $button=$_POST['button'];
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
     $stmt = $conn->query("SELECT c.id,c.title,c.descrip,c.typeof,c.stat,c.assigned_to,c.created, c1.firstname, c1.lastname, c1.id  FROM issues c, users c1 WHERE c.assigned_to=c1.id");
@@ -24,7 +23,14 @@ try{
             echo '<tr>';
             echo '<td class="title">'.$row['title'].'</td>';
             echo '<td class="typeof">'.$row['typeof'].'</td>';
-            echo '<td   class="status">'.$row['stat'].'</td>';
+            echo '<td  class="status">'.$row['stat'].'</td>';
+            // echo '<td>';
+            // echo '<select name="Stat">';
+            // echo '<option value="open" selected>open</option>';
+            // echo '<option value="closed">closed</option>';
+            // echo '<option value="in progress">in progress</option>';
+            // echo '</select>';
+            // echo '</td>';
             echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
             echo '<td>'.$date1.'</td>';
             echo '</tr>';
@@ -47,7 +53,14 @@ try{
                 echo '<tr>';
                 echo '<td class="title">'.$row['title'].'</td>';
                 echo '<td class="typeof">'.$row['typeof'].'</td>';
-                echo '<td   class="status">'.$row['stat'].'</td>';
+                echo '<td  class="status">'.$row['stat'].'</td>';
+                // echo '<td>';
+                // echo '<select name="Stat">';
+                // echo '<option value="open" selected>open</option>';
+                // echo '<option value="closed">closed</option>';
+                // echo '<option value="in progress">in progress</option>';
+                // echo '</select>';
+                // echo '</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
                 echo '<td>'.$date1.'</td>';
                 echo '</tr>';
@@ -65,13 +78,20 @@ try{
         echo '<th>Created</th>';
         echo '</tr>';
         foreach($results as $row){
-            if($row['id']==2){
+            if($row['id']==$_SESSION['id']){
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
                 echo '<td class="title">'.$row['title'].'</td>';
                 echo '<td class="typeof">'.$row['typeof'].'</td>';
                 echo '<td  class="status">'.$row['stat'].'</td>';
+                // echo '<td>';
+                // echo '<select name="Stat">';
+                // echo '<option value="open" selected>open</option>';
+                // echo '<option value="closed">closed</option>';
+                // echo '<option value="in progress">in progress</option>';
+                // echo '</select>';
+                // echo '</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
                 echo '<td>'.$date1.'</td>';
                 echo '</tr>';

@@ -1,6 +1,7 @@
 <?php
-session_start();
+// session_start();
 require_once 'dbconfig.php';
+require_once "login_valid.php";
 
 try{
     $title = $_POST['title'];
