@@ -4,10 +4,12 @@ html{
     max-width: 1500px;
 }
 body{
+    font-family: sans-serif, arial;
+
     color: white;
     height: 100%;
     display:grid;
-    grid-template-areas: 
+    grid-template-areas:
     "header header header"
     "sidebar mainbar mainbar"
     "sidebar mainbar mainbar"
@@ -89,6 +91,10 @@ td{
     border-bottom: 1px solid black;
 }
 
+td:hover{
+  cursor: pointer;
+}
+
 
 tr,td,th{
     padding-right: 10px;
@@ -104,7 +110,7 @@ th{
 }
 
 /* TITLE HEADING */
-th:nth-child(1){ 
+th:nth-child(1){
     min-width: 480px;
     max-width:480px;
 }
@@ -191,4 +197,90 @@ li:nth-child(3){
 }
 li:nth-child(4){
     list-style-image: url(../images/logout.png);
+}
+
+
+.issuescont{
+  display: grid;
+  grid-template-columns: 1.6fr 0.4fr;
+  grid-template-rows: 0.3fr 1fr 1.7fr;
+  gap: 0px 80px;
+  grid-template-areas:
+    "Header Header"
+    "Main Aside"
+    ". .";
+}
+
+.issuescont{
+  margin: 40px;
+}
+.issuesheader{
+  grid-area: Header;
+}
+.issuesheader h1{
+  color: #242323;
+  font-size: 3em;
+  margin: 0;
+  margin-top: 20px;
+}
+.issuesheader h3{
+  font-size: 1.2em;
+  margin: 0;
+  padding-top: 5px;
+}
+.main{
+  margin-top: 20px;
+  grid-area: Main;
+}
+
+.main p:first-of-type{
+  padding-bottom: 50px;
+}
+
+.main p:nth-of-type(2){
+  color: #808080;
+}
+
+.main p:nth-of-type(3){
+  color: #808080;
+}
+
+.aside{
+  margin-top: 20px;
+  grid-area: Aside;
+  display: flex;
+  flex-direction: column;
+}
+
+.aside button{
+  margin-bottom: 20px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.aside button:nth-of-type(1){
+  background: #4c6dd2;
+}
+
+.aside button:last-child{
+  background: #58d255;
+}
+
+.aside button:hover{
+  cursor: pointer;
+}
+
+.inneras{
+  background: #ededed;
+  border: 1px solid #7d7d7d;
+  margin-bottom: 20px;
+}
+
+.inneras p{
+  padding-left: 10px;
+  padding-top: 10px;
 }

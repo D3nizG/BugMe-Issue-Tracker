@@ -26,7 +26,6 @@ if(isset($_POST["login"])) {
                 $_SESSION['id'] = $data['id'];
                 $_SESSION['firstname'] = $data['firstname'];
                 header('location:home.php');
-                $logg = $_SESSION['id'];
             }
             else{
                 $errorMsg = '<label style="color:red;">Invalid email or password!</label>';

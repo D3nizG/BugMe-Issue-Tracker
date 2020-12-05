@@ -6,7 +6,7 @@ try{
     // $logg=$_COOKIE['id'];
     $button=$_POST['button'];
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
-    $stmt = $conn->query("SELECT c.title,c.descrip,c.typeof,c.stat,c.assigned_to,c.created, c1.firstname, c1.lastname, c1.id  FROM issues c, users c1 WHERE c.assigned_to=c1.id");
+    $stmt = $conn->query("SELECT c.id,c.title,c.descrip,c.typeof,c.stat,c.assigned_to,c.created, c1.firstname, c1.lastname, c1.id  FROM issues c, users c1 WHERE c.assigned_to=c1.id");
     $results = $stmt ->fetchALL(PDO ::FETCH_ASSOC);
     if($button=='all'){
         echo '<table>';
@@ -20,8 +20,9 @@ try{
         foreach($results as $row){
             $datetime = new DateTime($row['created']);
             $date1 = $datetime->format('Y-m-d');
+
             echo '<tr>';
-            echo '<td>'.$row['title'].'</td>';
+            echo '<td class="title">'.$row['title'].'</td>';
             echo '<td class="typeof">'.$row['typeof'].'</td>';
             echo '<td   class="status">'.$row['stat'].'</td>';
             echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
@@ -44,7 +45,7 @@ try{
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
-                echo '<td>'.$row['title'].'</td>';
+                echo '<td class="title">'.$row['title'].'</td>';
                 echo '<td class="typeof">'.$row['typeof'].'</td>';
                 echo '<td   class="status">'.$row['stat'].'</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
@@ -68,7 +69,7 @@ try{
                 $datetime = new DateTime($row['created']);
                 $date1 = $datetime->format('Y-m-d');
                 echo '<tr>';
-                echo '<td>'.$row['title'].'</td>';
+                echo '<td class="title">'.$row['title'].'</td>';
                 echo '<td class="typeof">'.$row['typeof'].'</td>';
                 echo '<td  class="status">'.$row['stat'].'</td>';
                 echo '<td>'.$row['firstname'].' '.$row['lastname'].'</td>';
@@ -78,6 +79,8 @@ try{
         }
         echo '</table>';
     }
+
+
 }
 catch (PDOException $pe){
     die("Could not connect to the database $dbname :" . $pe->getMessage());
