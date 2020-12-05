@@ -5,5 +5,5 @@ Admin Login to Portal
 email: admin@project2.com
 password: Password123
 
-
-Home Page Location: "scripts.login.php"
+Login Page Location "scripts/login.php"
+Home Page Location: "scripts/home.php"
