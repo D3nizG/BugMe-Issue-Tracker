@@ -1,7 +1,6 @@
 <?php
-<<<<<<< HEAD
-session_start();
-require_once 'connectdb.php';
+// session_start();
+require_once 'login_valid.php';
 
 
 
@@ -35,9 +34,6 @@ if(isset($_POST["login"])) {
         }
 
     }
-=======
-require_once "login_valid.php";
->>>>>>> 3e15f2dde28ef84ee4737014eecfe4ad2de1651a
 ?>
 <!DOCTYPE html>
 <html lang="en">
