@@ -169,7 +169,7 @@ window.setInterval(function(){
             a.style.backgroundColor='orange';
             a.style.color='white';
         }
-        if(textt=='in progress'){
+        if(textt=='inprogress'){
             a.innerHTML="IN PROGRESS";
             a.style.backgroundColor='rgb(255,255,0)';
         }
