@@ -10,11 +10,11 @@ function validate() {
     var valid = true;
     var pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
     document.getElementById("email").innerHTML = "";
-            console.log(document.getElementById("email").innerHTML="hello")
+            // console.log(document.getElementById("email").innerHTML="hello")
     document.getElementById("password").innerHTML = "";
     
     var email = document.getElementById("email").value;
-            console.log(email)
+            // console.log(email)
     var password = document.getElementById("password").value;
 
     if(email == "") 
