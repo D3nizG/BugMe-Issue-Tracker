@@ -131,6 +131,40 @@ function pageSetup(){
     cont.appendChild(main);
     cont.appendChild(aside);
     page.appendChild(cont);
+
+    but1.addEventListener("click", function(){
+      var formData = new FormData();
+      formData.append("button","closed");
+      formData.append("title",jso['title']);
+      fetch("expanded_issues.php", {
+        method: 'POST',
+        body: formData,
+      }).then(function(response){
+        return response.text();
+      }).then(function(text){
+        console.log(text);
+      }).catch(function(error){
+        console.log(error);
+      });
+      location.reload();
+    });
+
+    but2.addEventListener("click", function(){
+      var formData = new FormData();
+      formData.append("button","inprogress");
+      formData.append("title",jso['title']);
+      fetch("expanded_issues.php", {
+        method: 'POST',
+        body: formData,
+      }).then(function(response){
+        return response.text();
+      }).then(function(text){
+        console.log(text);
+      }).catch(function(error){
+        console.log(error);
+      });
+      location.reload();
+    });
   }
 
   var rows = document.getElementsByTagName("tr");
