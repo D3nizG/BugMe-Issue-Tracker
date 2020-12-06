@@ -34,7 +34,7 @@ if($_SESSION['id']==null){
     <div class="formdiv">
       <h1>New User</h1>
 
-      <form name = "adduserForm" action="scripts/add_user.php" method="post" >
+      <form name = "adduserForm" action="add_user.php" method="post" >
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" >
       
